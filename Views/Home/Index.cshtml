@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!-- About Section -->
+
+<div class="w3-container" id="about">
+    <div class="w3-content" style="max-width:700px">
+        <h1 class="w3-center">Our Story</h1><br>
+        <p class="w3-large w3-text-grey w3-hide-medium">Established in 2019, Mushroom Tea is a local brand devoting to shape local food trends.</p>
+        <p class="w3-large w3-text-grey w3-hide-medium"> It have been serving quality tea beverages and light meals to customers in a cosy and soothing ambience.</p>
+    </div>
+</div>
+
+<br />
+<br />
+
+<!-- About Container -->
+<div class="w3-container" id="Container">
+    <img src="http://massautomation-global.com/wp-content/uploads/2019/11/bali-catering-menu.jpeg" style="width:100%;max-width:1600px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> Tuesday to Sunday, from 7am to 5pm.</p>
+</div>
+
+<br />
+<br />
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center">THE MENU</h5><br>
+        <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Foods');" id="myLink">
+                <div class="w3-col s6 tablink">Foods</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                <div class="w3-col s6 tablink">Drinks</div>
+            </a>
+        </div>
+
+
+        <div id="Foods" class="w3-container menu w3-padding-48 w3-card">
+            <h5>ALL DAY BREAKFAST</h5>
+            <p class="w3-text-grey">HKD 118</p>
+            <p class="w3-text-grey">Creamy scrambled eggs, pork sausages, bacon rasher, roasted vine tomatoes, forest mushrooms, baked beans, toast</p><br>
+
+            <h5>GREEK YOGURT BERRIES PANCAKE</h5>
+            <p class="w3-text-grey">HKD 68</p>
+            <p class="w3-text-grey">hot fluffy pancake, honey, chia seed, Greek yogurt, frest strawberries, blueberries, blackberries</p><br>
+
+            <h5>WHITE ANCHOVY CAESAR SALAD</h5>
+            <p class="w3-text-grey">HKD 58</p>
+            <p class="w3-text-grey">crisp romaine, pancetta chips, with white anchovy caesar dressing</p><br>
+
+            <h5>BAGEL</h5>
+            <p class="w3-text-grey">HKD 62</p>
+            <p class="w3-text-grey">parma ham, rocket and parmesan poppy seed bagel</p><br>
+
+        </div>
+
+        <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>TEA (Hot only)</h5>
+            <p class="w3-text-grey">HKD 48</p>
+            <p class="w3-text-grey">earl grey / English breakfast tea</p><br>
+
+            <h5>COFFEE (Hot only)</h5>
+            <p class="w3-text-grey">HKD 44</p>
+            <p class="w3-text-grey">caffè latte</p><br>
+
+            <h5>CHOCOLATO (Hot only)</h5>
+            <p class="w3-text-grey">HKD 44</p>
+            <p class="w3-text-grey">original</p><br>
+
+            <h5>FRESH JUICE</h5>
+            <p class="w3-text-grey">HKD 40</p>
+            <p class="w3-text-grey">apple</p><br>
+
+            <h5>WATER</h5>
+            <p class="w3-text-grey">HKD 30</p>
+            <p class="w3-text-grey">sparkling Water </p>
+        </div>
+
+    </div>
+</div>
+
+<br />
+<br />
+
+
+<!-- Contact Section -->
+<div class="w3-container" id="contact">
+    <div class="w3-content" style="max-width:700px">
+        <h1 class="w3-center">Contact</h1><br>
+
+        <address>
+            <p class="w3-large w3-text-grey w3-hide-medium w3-center">
+                <strong>Student:</strong> CW Lam<br /><br />
+                <strong>email address:</strong> chiang.lam@students.plymouth.ac.uk<br />
+                <strong>Support:</strong> <a href="mailto:chiang.lam@students.plymouth.ac.uk">chiang.lam@students.plymouth.ac.uk</a><br />
+            </p>
+        </address>
+
+    </div>
+
+    <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+    </script>
+
+

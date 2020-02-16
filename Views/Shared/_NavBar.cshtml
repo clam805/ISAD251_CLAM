@@ -1,0 +1,24 @@
+﻿<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:3px;">
+        @Html.ActionLink("Mushroom Tea", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav center">
+
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li><a href="/Home/#menu" class="w3-button w3-block">Menu</a></li>
+                <li>@Html.ActionLink("Food and Drink", "Index", "Item")</li>
+                <li>@Html.ActionLink("Order", "Index", "Order")</li>
+                <li>@Html.ActionLink("View Order Item", "Index", "Orderitems")</li>
+
+            </ul>
+
+            <!-- Right-sided navbar links-->
+            <ul class="nav navbar-nav w3-right w3-hide-small">
+                <li>@Html.Partial("_LoginPartial")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - Mushroom Tea</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+
+
+
+</head>
+<style>
+    body, html {
+        height: 100%;
+        font-family: sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: sans-serif;
+        letter-spacing: 5px;
+    }
+</style>
+
+<body>
+
+
+    @Html.Partial("_NavBar")
+
+    <br />
+    <br />
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+        <img src="https://www.chefraymoneinc.com/wp-content/uploads/sites/89/2018/07/catering.jpg" style="width:100%;max-width:1600px">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+
+            <div style="background-size: 100%; color: black; font-size: 48px; font-family: 'Shift', sans-serif; font-weight: bold;">
+                <h1>FRESH</h1>
+                <p class="lead">
+                    We are rustic without complications, home-style caterer
+                    with a passion for Tea, food and comfort.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <br />
+    <br />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mushroom Tea House by CWLam</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
